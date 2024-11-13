@@ -1,0 +1,6 @@
+{
+  "homepage": "https://adriangonzalez.studio",
+  "dependencies": {
+    "react-router-dom": "^6.28.0"
+  }
+}
