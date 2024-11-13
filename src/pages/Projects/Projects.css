@@ -1,0 +1,137 @@
+/* src/pages/Projects.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Projects Page Layout */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 20px;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.projects-subtitle {
+  font-size: 1.3rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Projects List Layout */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.project-details {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.project-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project-button {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 25px;
+  color: #fff;
+  background-color: #0071e3;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-item {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project-details {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .project-name {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-button {
+    font-size: 1rem;
+  }
+}

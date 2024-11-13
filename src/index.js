@@ -1,23 +1,23 @@
-// src/index.js
+// src/index.js (App.js)
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home/Home'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
+import Navbar from './components/Navbar'; // Import Navbar component
 
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div>
-        {/* Navigation */}
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-          </ul>
-        </nav>
-
+        {/* Navbar */}
+        <Navbar />
         {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
