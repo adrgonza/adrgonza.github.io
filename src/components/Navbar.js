@@ -10,9 +10,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
+      {/* <div className="navbar-brand">
         <Link to="/" className="navbar-logo">Adrian Gonzalez</Link>
-      </div>
+      </div> */}
 
       {/* Navigation Links */}
       <ul className={`navbar-links ${isMobile ? 'active' : ''}`}>

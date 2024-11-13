@@ -1,22 +1,40 @@
 // src/pages/Home/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';  // Import the CSS file for styling
+import './Home.css';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <section className="home-intro">
-        <h1 className="home-title">Welcome to My Website</h1>
-        <p className="home-subtitle">I’m a passionate developer focused on creating beautiful and functional web experiences.</p>
-        <p className="home-about">
-          I specialize in full-stack development, working with modern technologies to build innovative solutions. 
-          My goal is to continually learn, grow, and push the boundaries of what’s possible in tech.
-        </p>
-        <Link to="/projects" className="home-button">
-          View My Projects
-        </Link>
-      </section>
+      <div className="home-content">
+        <div className="home-description">
+          <h2>Adrian Gonzalez</h2>
+          <p>
+            Passionate Computer Science student
+            with a love for web development, design, and innovation. Currently
+            studying at 42Lausanne, I focus on creating functional and visually
+            appealing applications. My journey in tech has taken me through
+            various projects, and I strive to keep learning and growing.
+          </p>
+          <Link to="/projects" className="explore-button">
+            Explore my work
+          </Link>
+        </div>
+        <div className="home-image">
+          <img src="https://i.ibb.co/stnKDfR/Home-photo.jpg" alt="Adrián González Serrano" />
+          <div className="image-overlay">
+            <a href="https://github.com/adrgonza" target="_blank" rel="noopener noreferrer" className="overlay-link github-link">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/adrgonza" target="_blank" rel="noopener noreferrer" className="overlay-link linkedin-link">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://salmon-guenevere-10.tiiny.site" download className="overlay-link download-link">
+              <i className="fas fa-file-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
