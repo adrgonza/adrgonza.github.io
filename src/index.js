@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';  // React 18 uses `ReactDOM.createRoot`
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';  // Updated imports
-import Home from './pages/Home/Home';  // Assuming your Home component is inside src/pages/Home/Home.js
+import Home from './pages/Home/Home.js';  // Assuming your Home component is inside src/pages/Home/Home.js
 
 const App = () => {
   return (
