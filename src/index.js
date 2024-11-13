@@ -1,21 +1,21 @@
 // src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';  // React 18 uses `ReactDOM.createRoot`
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';  // Updated imports
-import Home from './pages/Home/Home.js';  // Assuming your Home component is inside src/pages/Home/Home.js
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home'; 
 
 const App = () => {
   return (
     <Router>
       <div>
-        {/* Navigation (optional for SPA) */}
+        {/* Navigation */}
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
           </ul>
         </nav>
 
-        {/* Routes (v6 uses Routes instead of Switch) */}
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
