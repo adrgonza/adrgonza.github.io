@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "./docs",
+  "homepage": "https://adriangonzalez.studio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
