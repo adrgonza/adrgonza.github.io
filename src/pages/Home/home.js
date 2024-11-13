@@ -1,9 +1,8 @@
-//src/Home/home.js
-
+// src/pages/Home.js
 import React from 'react';
 
 const Home = () => {
-  return <h1>Welcome to My Portfolio!</h1>;
+  return <h1>Welcome to my portfolio!</h1>;
 };
 
 export default Home;
