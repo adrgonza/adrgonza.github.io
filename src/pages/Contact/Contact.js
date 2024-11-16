@@ -1,65 +1,52 @@
-// src/pages/Contact.js
-import React, { useState } from 'react';
-import './Contact.css'; // Import the CSS file for styling
+import React from 'react';
+import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <div className="contact-container">
       <div className="contact-header">
-        <h1 className="contact-title">Get In Touch</h1>
-        <p className="contact-subtitle">I’d love to hear from you. Feel free to reach out for collaborations or questions!</p>
+        <h1 className="contact-title">LET'S TALK</h1>
+        <p className="contact-subtitle">
+          I'm here to answer your questions or collaborate on projects. Reach out below.
+        </p>
       </div>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="contact-input"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="contact-input"
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          className="contact-textarea"
-          required
-        ></textarea>
-        <button type="submit" className="contact-button">
-          Send Message
-        </button>
-      </form>
+      <div className="contact-details">
+        <div className="contact-card">
+          <p className="contact-info">
+            <strong>Name:</strong> Adrián González
+          </p>
+          <p className="contact-info">
+            <strong>Email:</strong> <a href="mailto:adrian.gonser@icloud.com">adrian.gonser@icloud.com</a>
+          </p>
+          <p className="contact-info">
+            <strong>Phone:</strong> +41 76 123 4567
+          </p>
+          <p className="contact-info">
+            <strong>Based in:</strong> Lausanne, Switzerland🇨🇭
+          </p>
+        </div>
+        <div className="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.123456789012!2d6.6323!3d46.5197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6c1234567890%3A0x1234567890abcdef!2sLausanne!5e0!3m2!1sen!2sch!4v1234567890123"
+            width="100%"
+            height="200"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div className="contact-links">
+          <a href="https://github.com/adrgonza" target="_blank" rel="noopener noreferrer" className="contact-link">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/adrgonza" target="_blank" rel="noopener noreferrer" className="contact-link">
+            LinkedIn
+          </a>
+          <a href="https://adriangonzalez.studio" target="_blank" rel="noopener noreferrer" className="contact-link">
+            Portfolio
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

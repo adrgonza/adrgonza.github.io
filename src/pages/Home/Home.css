@@ -56,7 +56,7 @@
   align-items: center;
   overflow: hidden;
   border-radius: 15px;
-  max-width: 600px;
+  max-width: 500px;
   aspect-ratio: 3 / 4; /* Crops the image to a portrait-like ratio */
 }
 
@@ -84,11 +84,11 @@
 }
 
 .overlay-link:hover {
-  transform: scale(1.0);
+  transform: scale(2.0);
 }
 
 .github-link .fab.fa-github,
 .linkedin-link .fab.fa-linkedin,
 .download-link .fas.fa-file-download {
-  font-size: 1.5rem;
+  font-size: 5.5rem;
 }

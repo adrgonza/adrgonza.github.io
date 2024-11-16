@@ -1,20 +1,20 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';  // Import the CSS file for styling
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);  // State for mobile menu toggle
+  const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => setIsMobile(!isMobile);  // Toggle mobile menu
+  const toggleMenu = () => setIsMobile(!isMobile);
+
+  React.useEffect(() => {
+    setIsMobile(false);
+  }, [location]);
 
   return (
     <nav className="navbar">
-      {/* <div className="navbar-brand">
-        <Link to="/" className="navbar-logo">Adrian Gonzalez</Link>
-      </div> */}
-
-      {/* Navigation Links */}
+      {/* Navbar Links */}
       <ul className={`navbar-links ${isMobile ? 'active' : ''}`}>
         <li><Link to="/" className="navbar-link">Home</Link></li>
         <li><Link to="/projects" className="navbar-link">Projects</Link></li>

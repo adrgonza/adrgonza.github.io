@@ -1,55 +1,91 @@
 // src/pages/Projects.js
-import React from 'react';
-import './Projects.css'; // Import the CSS for styling
+import React, { useState } from 'react';
+import './Projects.css';
 
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const projects = [
+    {
+      image: "https://via.placeholder.com/600x400",
+      title: "Project One: Advanced Web App",
+      description: "A sophisticated web application that integrates multiple technologies."
+    },
+    {
+      image: "https://via.placeholder.com/600x400",
+      title: "Project Two: Mobile App Development",
+      description: "A mobile app built using React Native, designed to enhance user engagement."
+    },
+    {
+      image: "https://via.placeholder.com/600x400",
+      title: "Project Three: AI-driven System",
+      description: "An artificial intelligence system designed to optimize performance and efficiency."
+    },
+    {
+      image: "https://via.placeholder.com/600x400",
+      title: "Project One: Advanced Web App",
+      description: "A sophisticated web application that integrates multiple technologies."
+    },
+    {
+      image: "https://via.placeholder.com/600x400",
+      title: "Project Two: Mobile App Development",
+      description: "A mobile app built using React Native, designed to enhance user engagement."
+    },
+    {
+      image: "https://via.placeholder.com/600x400",
+      title: "Project Three: AI-driven System",
+      description: "An artificial intelligence system designed to optimize performance and efficiency"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex >= projects.length - 5 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? projects.length - 5 : prevIndex - 1
+    );
+  };
+
   return (
     <div className="projects-container">
-      <div className="projects-header">
-        <h1 className="projects-title">My Projects</h1>
-        <p className="projects-subtitle">
-          Explore my work and how I solve real-world challenges with technology.
-        </p>
-      </div>
-
-      <div className="projects-list">
-        <div className="project-item">
-          <div className="project-image">
-            <img src="https://via.placeholder.com/600x400" alt="Project 1" />
-          </div>
-          <div className="project-details">
-            <h2 className="project-name">Project One: Advanced Web App</h2>
-            <p className="project-description">
-              A sophisticated web application that integrates multiple technologies, including React, Node.js, and MongoDB, to provide seamless user experiences.
-            </p>
-            <a href="#" className="project-button">View Project</a>
-          </div>
+      <div className="projects-slider">
+        <button className="slider-button prev" onClick={prevSlide}>&lt;</button>
+        
+        <div className="projects-track" style={{
+          transform: `translateX(-${currentIndex * 100}%)`
+        }}>
+          {projects.map((project, index) => (
+            <div key={index} className="project-card">
+              <div className="project-image-container">
+                <img 
+                  src={project.image} 
+                  alt={`Project ${index + 1}`} 
+                  className="project-image"
+                />
+                <div className="project-overlay">
+                  <h2 className="project-title">{project.title}</h2>
+                  <p className="project-description">{project.description}</p>
+                  <a href="#" className="project-link" aria-label="View Project"></a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="project-item">
-          <div className="project-image">
-            <img src="https://via.placeholder.com/600x400" alt="Project 2" />
-          </div>
-          <div className="project-details">
-            <h2 className="project-name">Project Two: Mobile App Development</h2>
-            <p className="project-description">
-              A mobile app built using React Native, designed to enhance user engagement with innovative features and a beautiful, intuitive interface.
-            </p>
-            <a href="#" className="project-button">View Project</a>
-          </div>
-        </div>
-
-        <div className="project-item">
-          <div className="project-image">
-            <img src="https://via.placeholder.com/600x400" alt="Project 3" />
-          </div>
-          <div className="project-details">
-            <h2 className="project-name">Project Three: AI-driven System</h2>
-            <p className="project-description">
-              An artificial intelligence system designed to optimize performance and efficiency in high-demand environments, such as data processing and automation.
-            </p>
-            <a href="#" className="project-button">View Project</a>
-          </div>
+        <button className="slider-button next" onClick={nextSlide}>&gt;</button>
+        
+        <div className="slider-dots">
+          {Array.from({ length: projects.length }).map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${currentIndex === index ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
         </div>
       </div>
     </div>
