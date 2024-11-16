@@ -9,6 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #f5f5f7;
   color: #1d1d1f;
+  overflow-x: hidden;
 }
 
 /* Container */
@@ -20,18 +21,24 @@ body {
   min-height: 100vh;
   padding: 20px;
   background-color: #ffffff;
+  animation: fadeIn 3s ease-out; /* Slow fade-in for the container */
 }
 
 /* Header */
 .contact-header {
   text-align: center;
   margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeSlide 3s ease-out 0.5s both; /* Fade-in for the header */
 }
 
 .contact-title {
   font-size: 3.5rem;
   font-weight: 700;
   color: #1d1d1f;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 1s both; /* Smooth fade-in for the title */
 }
 
 .contact-subtitle {
@@ -41,12 +48,16 @@ body {
   margin-top: 10px;
   max-width: 600px;
   line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 1.5s both; /* Fade-in for the subtitle */
 }
 
 /* Details */
 .contact-details {
   width: 100%;
   max-width: 800px;
+  opacity: 0;
+  animation: fadeSlide 3s ease-out 1s both; /* Fade-in for details section */
 }
 
 .contact-card {
@@ -56,6 +67,8 @@ body {
   margin-bottom: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: left;
+  opacity: 0;
+  animation: fadeSlide 2.5s ease-out 1.8s both; /* Fade and slide-in for the contact card */
 }
 
 .contact-info {
@@ -74,17 +87,14 @@ body {
   color: #005bb5;
 }
 
-.flag {
-  width: 20px;
-  margin-left: 10px;
-}
-
 /* Map */
 .map-container {
   margin: 20px 0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 3s ease-out 2.3s both; /* Fade-in for map */
 }
 
 /* Links */
@@ -92,21 +102,23 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  opacity: 0;
+  animation: fadeSlide 3s ease-out 2.5s both; /* Fade-in for links */
 }
 
 .contact-link {
   margin: 0 15px;
   font-size: 1.2rem;
-  color: #0071e3;
+  color: #000000;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .contact-link:hover {
-  color: #005bb5;
-  text-decoration: underline;
+  font-size: large;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .contact-title {
     font-size: 2.5rem;
@@ -119,5 +131,28 @@ body {
   .contact-link {
     font-size: 1rem;
     margin: 0 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

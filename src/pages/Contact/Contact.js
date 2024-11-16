@@ -19,9 +19,6 @@ const Contact = () => {
             <strong>Email:</strong> <a href="mailto:adrian.gonser@icloud.com">adrian.gonser@icloud.com</a>
           </p>
           <p className="contact-info">
-            <strong>Phone:</strong> +41 76 123 4567
-          </p>
-          <p className="contact-info">
             <strong>Based in:</strong> Lausanne, Switzerland🇨🇭
           </p>
         </div>
@@ -42,8 +39,8 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/adrgonza" target="_blank" rel="noopener noreferrer" className="contact-link">
             LinkedIn
           </a>
-          <a href="https://adriangonzalez.studio" target="_blank" rel="noopener noreferrer" className="contact-link">
-            Portfolio
+          <a href="https://salmon-guenevere-10.tiiny.site" target="_blank" rel="noopener noreferrer" className="contact-link">
+            CV
           </a>
         </div>
       </div>

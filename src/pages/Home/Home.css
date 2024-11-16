@@ -1,94 +1,184 @@
-/* src/pages/Home/Home.css */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
 
 .home-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8f8f8;
-  padding: 0 20px;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0 40px;
+  animation: fadeIn 2.5s ease-out; /* Slow and smooth fade-in for the whole container */
 }
 
-.home-content {
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Intro Section */
+.intro-section {
+  margin-bottom: 60px;
+  animation: fadeSlide 2.5s ease-out 0.5s both; /* Delayed fade and slide in for the intro text */
+}
+
+.home-title {
+  font-size: clamp(5rem, 10vw, 12rem);
+  font-weight: 800;
+  color: #000;
+  line-height: 1.1;
+  margin: 0;
+  white-space: pre-line;
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 3s ease-out 0.5s both; /* Slower fade for dramatic effect */
+}
+
+.home-subtitle {
+  font-weight: 300;
+  color: #555;
+  opacity: 0;
+  animation: fadeSlide 2.5s ease-out 0.8s both; /* Slight delay for subtle emphasis */
+}
+
+/* Content Section */
+.content-section {
   display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: flex-start;
+  align-items: flex-start;
   max-width: 1200px;
   width: 100%;
-  gap: 50px;
 }
 
 .home-description {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.home-description h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
+  max-width: 500px;
+  animation: fadeSlide 3s ease-out 1.2s both; /* Delayed slide-in for content */
 }
 
 .home-description p {
   font-size: 1.2rem;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 30px;
+  line-height: 2;
+  margin-bottom: 20px;
+  color: #555;
+  opacity: 0;
+  animation: fadeIn 3s ease-out 1.4s both;
 }
 
 .explore-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
-  background-color: #333;
-  border-radius: 5px;
+  background-color: #000;
+  text-transform: uppercase;
   text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeSlide 3s ease-out 1.8s both; /* Button appears last */
 }
 
+.explore-button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Section */
 .home-image {
   flex: 1;
-  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  border-radius: 15px;
-  max-width: 500px;
-  aspect-ratio: 3 / 4; /* Crops the image to a portrait-like ratio */
+  animation: zoomIn 3s ease-out 1.5s both; /* Smooth zoom-in for the image */
 }
 
-.home-image img {
+.image-wrapper {
+  max-width: 400px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
 }
 
-.image-overlay {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
   display: flex;
   gap: 15px;
+  justify-content: center;
+  animation: fadeSlide 3s ease-out 2s both; /* Social links come in after the image */
 }
 
-.overlay-link {
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   font-size: 1.5rem;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
+  color: #000;
+  background-color: #fff;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.overlay-link:hover {
-  transform: scale(2.0);
-}
-
-.github-link .fab.fa-github,
-.linkedin-link .fab.fa-linkedin,
-.download-link .fas.fa-file-download {
-  font-size: 5.5rem;
+.social-link:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.2);
 }
