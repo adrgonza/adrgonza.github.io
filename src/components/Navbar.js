@@ -14,14 +14,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Navbar Links */}
       <ul className={`navbar-links ${isMobile ? 'active' : ''}`}>
         <li><Link to="/" className="navbar-link">Home</Link></li>
         <li><Link to="/projects" className="navbar-link">Projects</Link></li>
         <li><Link to="/contact" className="navbar-link">Contact</Link></li>
       </ul>
 
-      {/* Mobile Menu Icon */}
       <div className="navbar-toggle" onClick={toggleMenu}>
         <div className={`hamburger ${isMobile ? 'open' : ''}`}></div>
       </div>

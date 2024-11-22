@@ -1,19 +1,5 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #f5f5f7;
-  color: #1d1d1f;
-  overflow-x: hidden;
-}
-
 /* Container */
-.contact-container {
+/* .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,16 +7,15 @@ body {
   min-height: 100vh;
   padding: 20px;
   background-color: #ffffff;
-  animation: fadeIn 3s ease-out; /* Slow fade-in for the container */
-}
+  animation: fadeIn 3s ease-out;  Slow fade-in for the container 
+} 
 
-/* Header */
 .contact-header {
   text-align: center;
   margin-bottom: 40px;
   opacity: 0;
-  animation: fadeSlide 3s ease-out 0.5s both; /* Fade-in for the header */
-}
+  animation: fadeSlide 3s ease-out 0.5s both;
+} 
 
 .contact-title {
   font-size: 3.5rem;
@@ -38,7 +23,7 @@ body {
   color: #1d1d1f;
   margin-bottom: 10px;
   opacity: 0;
-  animation: fadeIn 2s ease-out 1s both; /* Smooth fade-in for the title */
+  animation: fadeIn 2s ease-out 1s both;
 }
 
 .contact-subtitle {
@@ -49,18 +34,18 @@ body {
   max-width: 600px;
   line-height: 1.6;
   opacity: 0;
-  animation: fadeIn 2s ease-out 1.5s both; /* Fade-in for the subtitle */
+  animation: fadeIn 2s ease-out 1.5s both;
 }
-
+*/
 /* Details */
-.contact-details {
+/* .contact-details {
   width: 100%;
   max-width: 800px;
   opacity: 0;
-  animation: fadeSlide 3s ease-out 1s both; /* Fade-in for details section */
-}
+  animation: fadeSlide 3s ease-out 1s both;
+} */
 
-.contact-card {
+/* .contact-card {
   background-color: #f9f9f9;
   border-radius: 15px;
   padding: 30px;
@@ -68,10 +53,10 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: left;
   opacity: 0;
-  animation: fadeSlide 2.5s ease-out 1.8s both; /* Fade and slide-in for the contact card */
-}
+  animation: fadeSlide 2.5s ease-out 1.8s both;
+} */
 
-.contact-info {
+/* .contact-info {
   font-size: 1.1rem;
   margin: 10px 0;
   color: #333;
@@ -85,25 +70,25 @@ body {
 
 .contact-info a:hover {
   color: #005bb5;
-}
+} */
 
 /* Map */
-.map-container {
+/* .map-container {
   margin: 20px 0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: fadeIn 3s ease-out 2.3s both; /* Fade-in for map */
-}
+  animation: fadeIn 3s ease-out 2.3s both; 
+} */
 
 /* Links */
-.contact-links {
+/* .contact-links {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   opacity: 0;
-  animation: fadeSlide 3s ease-out 2.5s both; /* Fade-in for links */
+  animation: fadeSlide 3s ease-out 2.5s both;
 }
 
 .contact-link {
@@ -116,10 +101,10 @@ body {
 
 .contact-link:hover {
   font-size: large;
-}
+} */
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .contact-title {
     font-size: 2.5rem;
   }
@@ -132,10 +117,10 @@ body {
     font-size: 1rem;
     margin: 0 10px;
   }
-}
+} */
 
 /* Animations */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -144,9 +129,9 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
-@keyframes fadeSlide {
+/* @keyframes fadeSlide {
   from {
     opacity: 0;
     transform: translateY(40px);
@@ -155,4 +140,4 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */

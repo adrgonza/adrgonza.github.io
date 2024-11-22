@@ -161,8 +161,9 @@ body {
 }
 
 /* Mobile Styles */
-@media (max-width: 1180px) {
+@media (max-width: 750px) {
   .navbar {
+    max-width: 80px;
     padding: 10px 5px;
   }
 
