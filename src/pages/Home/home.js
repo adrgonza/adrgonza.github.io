@@ -48,7 +48,6 @@ const Home = () => {
             className="home-social-link cv"
             aria-label="CV"
           ></a>
-
         </div>
       </aside>
     </div>
