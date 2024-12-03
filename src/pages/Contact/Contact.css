@@ -141,3 +141,37 @@
     transform: translateY(0);
   }
 } */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 40px;
+}
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.contact-title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 800;
+}
+
+.contact-subtitle {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 300;
+  color: #555;
+  line-height: 1.1;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}

@@ -52,7 +52,7 @@ body {
 
 .home-button {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 18px 30px;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -109,6 +109,7 @@ body {
     transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
+  
   &::before {
     content: '';
     display: block;

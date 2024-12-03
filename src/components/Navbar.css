@@ -1,35 +1,14 @@
-/* General Reset and Flexbox Layout */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-}
-
-/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 140px;
   position: fixed;
-  top: 0;
-  left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 5;
   transition: background 0.3s ease;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Navbar Links */
 .navbar-links {
   display: flex;
   list-style: none;
@@ -38,19 +17,15 @@ body {
 
 .navbar-link {
   text-decoration: none;
-  color: #333;
+  color: #000000;
   padding: 10px 15px;
-  font-size: 1rem;
-  font-weight: 500;
   margin: 0 10px;
   transition: color 0.3s ease, font-size 0.3s ease;
+  &:hover {
+    font-size: 1.1rem;   
+  }
 }
 
-.navbar-link:hover {
-  font-size: 1.1rem;
-}
-
-/* Mobile Navbar */
 .navbar-toggle {
   display: none;
   cursor: pointer;
@@ -98,7 +73,6 @@ body {
   top: 8px;
 }
 
-/* Active Mobile Menu */
 .navbar-links.active {
   display: flex;
   position: fixed;
@@ -124,16 +98,14 @@ body {
 }
 
 .navbar-links.active .navbar-link {
-  font-size: 1.5rem;  /* Larger text for better readability */
+  font-size: 1.5rem;
   transition: color 0.3s ease, font-size 0.3s ease;
 }
 
-/* Additional hover effect for expanded links */
 .navbar-links.active .navbar-link:hover {
   font-size: 1.6rem;
 }
 
-/* Hamburger menu open state */
 .hamburger.open:before {
   transform: rotate(45deg);
   top: 0;
@@ -148,7 +120,6 @@ body {
   background-color: transparent;
 }
 
-/* Animation for expanding mobile menu */
 @keyframes expand {
   0% {
     opacity: 0;
@@ -160,10 +131,9 @@ body {
   }
 }
 
-/* Mobile Styles */
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .navbar {
-    max-width: 80px;
+    width: 100%;
     padding: 10px 5px;
   }
 
@@ -175,7 +145,7 @@ body {
   }
 
   .navbar-toggle {
-    display: block; /* Show mobile menu toggle */
+    display: block; 
   }
 
   .navbar-links.active {
@@ -183,6 +153,6 @@ body {
   }
 
   .navbar-links.active li {
-    margin: 20px 0;  /* More spacing between links */
+    margin: 20px 0;
   }
 }
