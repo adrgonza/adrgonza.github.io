@@ -25,6 +25,11 @@
   line-height: 1.1;
 }
 
+.contact-intro a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .contact-content {
   display: flex;
   flex-direction: column;
@@ -41,10 +46,14 @@
   color: inherit;
 }
 
-.contact-arrow { 
+.contact-arrow {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .contact-intro hr {
@@ -56,4 +65,9 @@
   padding-right: 20px;
   font-size: clamp(3rem, 10vw, 6rem);
   transform: rotate(10deg);
+}
+
+.contact-symbol {
+  text-decoration: none;
+  color: #000000;
 }

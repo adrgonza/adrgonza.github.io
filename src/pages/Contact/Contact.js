@@ -6,10 +6,12 @@ const Contact = () => {
     <div className="contact-container">
       <header className='contact-intro'>
         <h2 className="contact-subtitle">Got a project in mind?</h2>
-        <div className='contact-arrow'>
-          <h1 className='contact-title'>LET'S TALK</h1>
-          <span>⤴</span>
-        </div>
+        <a href="mailto:adrian.gonser@icloud.com" aria-label="Contact Me">
+          <div className='contact-arrow'>
+            <h1 className='contact-title'>LET'S TALK</h1>
+            <span className='contact-symbol'>⤴</span>
+          </div>
+        </a>
         <hr></hr>
       </header>
       <main className='contact-content'>
