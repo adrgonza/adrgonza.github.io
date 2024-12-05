@@ -22,7 +22,7 @@ const Home = () => {
       </main>
       <aside className="home-content">
         <img
-          src="https://1drv.ms/u/c/e86ea5eb6505b4ac/IQRU3dvFPMBeQJ92KNOLSPyEAY3GV7Oa4Z0f_BzxOwr2__s?height=660"
+          src="https://i.postimg.cc/SqJm8ZbC/IMG-1692-1-2.webp"
           className="home-img"
           alt="Adrián González Serrano"
         />

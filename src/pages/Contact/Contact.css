@@ -52,7 +52,7 @@
   justify-content: space-between;
   transition: transform 0.3s ease, font-size 0.3s ease;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
 }
 
@@ -70,4 +70,26 @@
 .contact-symbol {
   text-decoration: none;
   color: #000000;
+}
+
+
+.contact-info {
+  margin-bottom: 80px;
+}
+
+.contact-info h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info p {
+  color: #555;
+}
+
+.contact-links li {
+  margin: 5px 0;
+}
+.contact-links a:hover {
+  color: #005999;
 }
