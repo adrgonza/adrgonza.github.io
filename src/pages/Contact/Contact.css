@@ -6,6 +6,41 @@
   padding: 0 40px;
 }
 
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+.slide-up-delay {
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Main intro styling */
 .contact-intro {
   display: flex;
   flex-direction: column;
@@ -37,11 +72,12 @@
   grid-row: 1 / 2;
 }
 
+/* Styling links */
 .contact-links {
   list-style-type: none;
 }
 
-.contact-links a{
+.contact-links a {
   text-decoration: none;
   color: inherit;
 }
@@ -50,28 +86,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: transform 0.3s ease, font-size 0.3s ease;
-  &:hover {
-    transform: scale(1.03);
-  }
+  transition: transform 0.3s ease;
+}
+
+.contact-arrow:hover {
+  transform: scale(1.03);
 }
 
 .contact-intro hr {
   border: none;
   border-top: 3px solid #000;
 }
-
-.contact-arrow span {
-  padding-right: 20px;
-  font-size: clamp(3rem, 10vw, 6rem);
-  transform: rotate(10deg);
-}
-
-.contact-symbol {
-  text-decoration: none;
-  color: #000000;
-}
-
 
 .contact-info {
   margin-bottom: 80px;
@@ -90,6 +115,67 @@
 .contact-links li {
   margin: 5px 0;
 }
+
 .contact-links a:hover {
   color: #005999;
+}
+
+.arrow {
+  position: relative;
+  width: clamp(4rem, 10vw, 8rem);
+  height: clamp(6rem, 15vw, 10rem);
+  margin-right: calc(15% - 3rem);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.arrow-top,
+.arrow-bottom {
+  background-color: #000;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  transform-origin: right center;
+  transition: all 0.15s;
+}
+
+.arrow-top {
+  transform: rotate(-45deg);
+}
+
+.arrow-bottom {
+  transform: rotate(-135deg);
+}
+
+.arrow-top::after,
+.arrow-bottom::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #7d7d7d;
+  transition: all 0.15s;
+}
+
+.arrow-top::after {
+  left: 100%;
+  right: 0;
+}
+
+.arrow-bottom::after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0.15s;
+}
+
+.arrow:hover .arrow-top::after {
+  left: 0;
+  transition-delay: 0.15s;
+}
+
+.arrow:hover .arrow-bottom::after {
+  right: 0;
+  transition-delay: 0s;
 }

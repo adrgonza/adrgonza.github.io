@@ -16,13 +16,15 @@
 }
 
 .navbar-link {
+  display: inline-block;
   text-decoration: none;
   color: #000000;
   padding: 10px 15px;
   margin: 0 10px;
-  transition: color 0.3s ease, font-size 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   &:hover {
-    font-size: 1.1rem;   
+    transform: scale(1.05);
+    color: #333;
   }
 }
 
@@ -103,7 +105,7 @@
 }
 
 .navbar-links.active .navbar-link:hover {
-  font-size: 1.6rem;
+  transform: scale(1.05);
 }
 
 .hamburger.open:before {
