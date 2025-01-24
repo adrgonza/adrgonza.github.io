@@ -20,8 +20,10 @@ const Contact = () => {
 
       <main className="contact-content slide-up-delay">
         <section className="contact-info">
-          <h2>About me</h2>
-          <p>Currently living Switzerland🇨🇭</p>
+          <h2>Adrian Gonzalez</h2>
+          <p>
+            Born in Spain, now seeking new challenges in Switzerland. 
+          </p>
         </section>
         <ul className="contact-links">
           <li>

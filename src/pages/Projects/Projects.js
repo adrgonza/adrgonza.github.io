@@ -3,239 +3,285 @@ import './Projects.css';
 
 const Projects = () => {
   return (
-    <div class="projects-container">
-      <div class="projects-carousel">
-        {/* <!-- Pixel Pong --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">Pixel Pong</h3>
-            <p class="item-tools">JavaScript, HTML5 Canvas</p>
+    <div className="projects-container">
+      <div className="projects-carousel">
+        {/* Pixel Pong */}
+        <div className="projects-item pixel-pong">
+          <div className="item-header">
+            <h3 className="item-title">Pixel Pong</h3>
+            <p className="item-tools">JavaScript, HTML5, Canvas</p>
           </div>
-          <label for="project-pixelpong" class="expand-button">+</label>
+          <label htmlFor="project-pixelpong" className="card-overlay-link"></label>
+          <label htmlFor="project-pixelpong" className="expand-button">+</label>
         </div>
 
-        {/* <!-- Matcha --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">Matcha</h3>
-            <p class="item-tools">React, Express, PostgreSQL</p>
+        {/* MineWorld */}
+        <div className="projects-item mineworld">
+          <div className="item-header">
+            <h3 className="item-title">MineWorld</h3>
+            <p className="item-tools">C, Graphic libraries, Raycasting</p>
           </div>
-          <label for="project-matcha" class="expand-button">+</label>
+          <label htmlFor="project-mineworld" className="card-overlay-link"></label>
+          <label htmlFor="project-mineworld" className="expand-button">+</label>
         </div>
 
-        {/* <!-- OrionPlattform --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">OrionPlattform</h3>
-            <p class="item-tools">Docker, Python</p>
+
+        {/* Orionplatform */}
+        <div className="projects-item orionplat">
+          <div className="item-header">
+            <h3 className="item-title">OrionPlatform</h3>
+            <p className="item-tools">Docker, Python</p>
           </div>
-          <label for="project-orionplatt" class="expand-button">+</label>
+          <label htmlFor="project-orionplat" className="card-overlay-link"></label>
+          <label htmlFor="project-orionplat" className="expand-button">+</label>
         </div>
 
-        {/* <!-- Midlands --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">Midlands</h3>
-            <p class="item-tools">C, Graphic libraries</p>
+        {/* Midlands */}
+        <div className="projects-item midlands">
+          <div className="item-header">
+            <h3 className="item-title">Midlands</h3>
+            <p className="item-tools">C, Graphic libraries</p>
           </div>
-          <label for="project-midlands" class="expand-button">+</label>
+          <label htmlFor="project-midlands" className="card-overlay-link"></label>
+          <label htmlFor="project-midlands" className="expand-button">+</label>
         </div>
 
-        {/* <!-- MineWorld --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">MineWorld</h3>
-            <p class="item-tools">C, Graphic libraries, Raycasting</p>
+        {/* Minishell */}
+        <div className="projects-item minishell">
+          <div className="item-header">
+            <h3 className="item-title">Minishell</h3>
+            <p className="item-tools">C, Bash</p>
           </div>
-          <label for="project-mineworld" class="expand-button">+</label>
+          <label htmlFor="project-minishell" className="card-overlay-link"></label>
+          <label htmlFor="project-minishell" className="expand-button">+</label>
         </div>
 
-        {/* <!-- Minishell --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">Minishell</h3>
-            <p class="item-tools">C, Bash</p>
+        {/* IRC */}
+        <div className="projects-item irc">
+          <div className="item-header">
+            <h3 className="item-title">IRC</h3>
+            <p className="item-tools">C++</p>
           </div>
-          <label for="project-minishell" class="expand-button">+</label>
+          <label htmlFor="project-irc" className="card-overlay-link"></label>
+          <label htmlFor="project-irc" className="expand-button">+</label>
         </div>
 
-        {/* <!-- IRC --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">IRC</h3>
-            <p class="item-tools">C++</p>
+        {/* Matcha */}
+        <div className="projects-item matcha">
+          <div className="item-header">
+            <h3 className="item-title">Matcha</h3>
+            <p className="item-tools">React, Express, PostgreSQL</p>
           </div>
-          <label for="project-irc" class="expand-button">+</label>
+          <label htmlFor="project-matcha" className="card-overlay-link"></label>
+          <label htmlFor="project-matcha" className="expand-button">+</label>
         </div>
 
-        {/* <!-- MyPortfolio --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">MyPortfolio</h3>
-            <p class="item-tools">Html, CSS</p>
+        {/* MyPortfolio */}
+        <div className="projects-item portfolio">
+          <div className="item-header">
+            <h3 className="item-title">MyPortfolio</h3>
+            <p className="item-tools">HTML, CSS</p>
           </div>
-          <label for="project-portfolio" class="expand-button">+</label>
+          <label htmlFor="project-portfolio" className="card-overlay-link"></label>
+          <label htmlFor="project-portfolio" className="expand-button">+</label>
         </div>
 
-        {/* <!-- Youthbook --> */}
-        <div class="projects-item">
-          <div class="item-header">
-            <h3 class="item-title">Youthbook</h3>
-            <p class="item-tools">Film Photography, Creativity</p>
+        {/* Youthbook */}
+        <div className="projects-item youthbook">
+          <div className="item-header">
+            <h3 className="item-title">Youthbook</h3>
+            <p className="item-tools">Film Photography, Creativity</p>
           </div>
-          <label for="project-youthbook" class="expand-button">+</label>
-        </div>
-      </div>
-
-      {/* <!-- Full-page overlay for Pixel Pong --> */}
-      <input type="checkbox" id="project-pixelpong" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-pixelpong" class="close-button">×</label>
-          <div class="project-details">
-            <p>A multiplayer pong game with pixel art.</p>
-            <h2>Pixel Pong</h2>
-            <video controls src="pixelpong.mp4" class="project-video"></video>
-            <p>This was the last project in the common core at 42, I did the creative part, the design, and I worked in the frontend.</p>
-            <video controls src="pixelpong.mp4" class="project-video"></video>
-            <p>Curiosities: Inspired by retro games.</p>
-            <a href="#" class="project-link">GitHub Link</a>
-          </div>
+          <label htmlFor="project-youthbook" className="card-overlay-link"></label>
+          <label htmlFor="project-youthbook" className="expand-button">+</label>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for Matcha --> */}
-      <input type="checkbox" id="project-matcha" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-matcha" class="close-button">×</label>
-          <div class="project-details">
-            <p>A modern dating app with location-based features.</p>
-            <h2>Matcha</h2>
-            <video controls src="matcha.mp4" class="project-video"></video>
-            <p>React, Express, PostgreSQL</p>
-            <video controls src="matcha.mp4" class="project-video"></video>
-            <p>Designed with privacy and compatibility in mind.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* Pixel Pong Overlay */}
+      <input type="checkbox" id="project-pixelpong" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-pixelpong" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>Pixel Pong</strong> is a multiplayer take on the classic Pong 
+              game, enhanced with delightful pixel art.
+            </p>
+            <video controls src="https://media-hosting.imagekit.io//5bb670818cc24fd4/377062596-09fb5cc9-d574-46b7-9f25-6e012b8fe88e.mov?Expires=1832350371&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Z8b3k6xRE4SzwvYnudIcdClgQz5G4kbafHnZhvtuDWZOaBJbFdg3YM9OrZTdu6Zie1apz893cs2S~~KdDSsf8jEkhO6D-hkOsPVhQSI8zDZ66IkCbfs-aEeesuTtHyNxnd0CWCjDdbLH-q1y0MdWraqnKatTk7qaDcBiHk-io2fmuUv97ajjUJkwbbh00hN9gRw-WR1clER3UTLJGQRVBKUWbqfqpCYgJw16wWbpxfrbWk8gd8xgGLx1wCzUTOkuO9BxQzi7s0NMyRaSvEJJEh58~W9bQcGsQ2~8Zi~VqPRX1kMaUXnkapRxdbM0ZiWYN-LwaisayfR5EF7D6zr46g__" className="project-video"></video>
+            <p>
+              This was the final project in the 42 common core, where I led the creative 
+              design and front-end implementation.
+            </p>
+            <a href="https://github.com/adrgonza/ft_transcendence" className="project-link">GitHub</a>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for OrionPlattform --> */}
-      <input type="checkbox" id="project-orionplatt" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-orionplatt" class="close-button">×</label>
-          <div class="project-details">
-            <p>A platform for efficient project management.</p>
-            <h2>OrionPlattform</h2>
-            <video controls src="orionplatt.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="orionplatt.mp4" class="project-video"></video>
-            <p>Built to handle large-scale projects.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* Matcha Overlay */}
+      <input type="checkbox" id="project-matcha" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-matcha" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>Matcha</strong> is a modern dating app that connects people based 
+              on real-time location and shared interests.
+            </p>
+            <video controls src="https://media-hosting.imagekit.io//3dda1f6081ad4fb0/Screen%20Recording%202025-01-24%20at%2021.16.45.mov?Expires=1832357878&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=O-6GPSO92HH5vbe9QMHABcaMFVLRQkBmRM32n6ai~ve5BgI~BOAAaIA3EXR-wJojkVVg4-uiDJm5bY6SVuuWI1dPvbPCS7kH0dkJFKHPOnfK~gKX7kEt7-K4cXVY7NOHn8nC6~RLLIBFvZxQ-Dz8jHAdMUNBkNIgjN6weF2StbIYyE-57dLrs5vXfum9GDFyxB~u~g4KlqvEDFikRgTz6L6vPK-CEiK3NBhft-4ZJZFqIE3k~8g4rkmFmyZC49MIrN-tF2rvfUltIqqt0CHEW-gm8MhNArv~NQ1dBabSxZbB0evxShIdXR-E2Go1Z9Qc6zmqOWOE7FqaGeZhNEpznA__" className="project-video"></video>
+            <p>
+              Built with <strong>React</strong>, <strong>Express</strong>, and <strong>PostgreSQL</strong>, it offers robust
+              privacy settings and a clean, intuitive interface for users seeking meaningful connections.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for Midlands --> */}
-      <input type="checkbox" id="project-midlands" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-midlands" class="close-button">×</label>
-          <div class="project-details">
-            <p>A robust system for team collaboration.</p>
-            <h2>Midlands</h2>
-            <video controls src="midlands.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="midlands.mp4" class="project-video"></video>
-            <p>Designed with scalability in mind.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* Orionplatform Overlay */}
+      <input type="checkbox" id="project-orionplat" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-orionplat" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>OrionPlatform</strong> uses <strong>Docker</strong>, <strong>Python</strong>, and multithreading 
+              to create a containerized trading network. Each user runs in a separate container, defined by a single 
+              configuration file.
+            </p>
+            <video controls src="https://media-hosting.imagekit.io//9ae02b7be21d4f89/IMG_8706.MP4?Expires=1832356167&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kEwdeTi1vxeRDtxVe-D6-z~CZZiMk6pievJDVFhoq3~dk~i1LwpzCi~ZacZ1~hZXGLsBb2k12SK-owqzHvC8zfbvPvEwgS7KiVqNeRuEO5fhhkURzZv7wWaWl8zJd2v-IHITcA63-rsLGJYKJ7vsfvVPLLcCRWjnhSdFhLKR-wFsPKtmyId4wuBvYHa-TnKTrXazd0BRMOpX~7ugcoW0dL8JdJ3BWfEW5Yj6f7c5APMz~Y4beGqJQX1CnnSjeEnGngRD8NGWHk7fOMuuMCqOUp9oDeOyVHpryggIWwSqKu4rmJLaS58k5nT2qLQ6zwA2Y7Sj9zl3vwKoBQOhM2-P1A__" className="project-video"></video>
+            <p>
+              A central server receives trading signals and distributes them to user containers, which then place 
+              orders through multiple crypto exchange APIs. This approach ensures scalable and secure multi-user 
+              trading.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for MineWorld --> */}
-      <input type="checkbox" id="project-mineworld" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-mineworld" class="close-button">×</label>
-          <div class="project-details">
-            <p>A fun game inspired by Minecraft.</p>
-            <h2>MineWorld</h2>
-            <video controls src="mineworld.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="mineworld.mp4" class="project-video"></video>
-            <p>Features procedural generation for infinite maps.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* Midlands Overlay */}
+      <input type="checkbox" id="project-midlands" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-midlands" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>Midlands</strong> is a robust application that demonstrates 
+              dynamic graphics rendering using C and specialized libraries.
+            </p>
+            <img src="https://i.ibb.co/hZsGvpp/Screenshot-2025-01-24-at-19-22-08.png" alt="Project Screenshot" className="project-video" />
+            <p>
+              Additionally, there is also a way to edit maps and create your own levels.
+              The map is simply an array of characters that you can modify at any time, 
+              and the game will analyze this array to render the new layout in real-time.
+            </p>
+            <img src="https://i.ibb.co/FD3ynDN/Screenshot-2025-01-24-at-20-55-30.png" alt="Project Screenshot" className="project-video" />
+            <a href="https://github.com/adrgonza/so_long" className="project-link">GitHub</a>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for Minishell --> */}
-      <input type="checkbox" id="project-minishell" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-minishell" class="close-button">×</label>
-          <div class="project-details">
-            <p>A simple shell implementation.</p>
-            <h2>Minishell</h2>
-            <video controls src="minishell.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="minishell.mp4" class="project-video"></video>
-            <p>Handles basic shell commands and file manipulation.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* MineWorld Overlay */}
+      <input type="checkbox" id="project-mineworld" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-mineworld" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>MineWorld</strong> is a 2D/3D hybrid game inspired by 
+              sandbox-style exploration and raycasting techniques.
+            </p>
+            <video controls src="https://media-hosting.imagekit.io//5b287196b4cd433f/Screen%20Recording%202025-01-24%20at%2019.33.46%202.mov?Expires=1832355083&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o90FJgvldCV-2nR8dIZMT2UxKVejAWHN0wUnStkKLmMN85-Ti4TKjH2EughtFNplTTOTRYFsHLMVcOWy6NU4jdyujIQngnvB2SuAW3tynLIlEbY7D9~h-i4~vxf7GYOvl~cW~yxL7U8nUzDNjadc7omPGpMAOZRzvIcoldTvbDokov-NI0Nvv~-e0NWkuMuGE5U0o8uFsD~SHyY1udmuFMFHMpX6O7~c7h49pVmqUxUcytou~rXi3c6DEe0uEnkvVPtI7F~yv~~OkAKNmOM5xCvJd9r0QjtDWEye7YvbMEvJDb6bXORMiUvkxbCoH7l9t99sVtEeLEoCGyLA1RIE-A__" className="project-video"></video>
+            <p>
+              Developed with <strong>C</strong>, <strong>Graphic libraries</strong>, and <strong>Raycasting </strong> 
+              to create procedurally generated maps and immersive environments.
+            </p>
+            <img src="https://i.ibb.co/9bcFRsF/Screenshot-2025-01-24-at-19-31-53.png" alt="Project Screenshot" className="project-video" />
+            <a href="https://github.com/adrgonza/cub3D" className="project-link">GitHub</a>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for IRC --> */}
-      <input type="checkbox" id="project-irc" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-irc" class="close-button">×</label>
-          <div class="project-details">
-            <p>A simple chat system based on IRC.</p>
-            <h2>IRC</h2>
-            <video controls src="irc.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="irc.mp4" class="project-video"></video>
-            <p>Implements basic messaging and channel features.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* Minishell Overlay */}
+      <input type="checkbox" id="project-minishell" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-minishell" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>Minishell</strong> is a custom shell implementation that is very close 
+              to <strong>Bash</strong> with extensive features, handling core command 
+              functionalities and scripting basics.
+            </p>
+            <video controls src="https://media-hosting.imagekit.io//b017fba8ecc24c13/Screen%20Recording%202025-01-24%20at%2021.07.00.mov?Expires=1832357329&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mIM4CVKZ3ewLgAM4XXnb4Tdg7KHxtFNFPbaW7xZBASEtAJgNHW2-LoSUHPOLMmIXEWRZ-z3BDQsqQIJ6zlRzljcVe1bSdNdhw4f7y61PV22R76y6vxqli11GF2vsFU6kgAidaRfNZosxIw0hq7-Z3x08VHmfpbcLxSXH6erReH2KQ21akbS5nM~0C-D53lZXISVxe~pofhdfDoCCgyBs7SCpguztyr2-FCk4ckiR5VPpX13xlNtQiZSCFl~hCI4-8nJbhnywK~OKMOfBJc~zCjoGvXf2BeugQEvyLrfSvcryTZr2AQbvOxZPekK3pBHwjdDrlHQlVFB0hwuXtQDmjA__" className="project-video"></video>
+            <p>
+              Written in <strong>C</strong> and inspired by <strong>Bash</strong>, it interprets 
+              user commands, manages processes, manipulates files, and supports a wide range 
+              of built-in commands.
+            </p>
+            <a href="https://github.com/adrgonza/minishell" className="project-link">GitHub</a>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for MyPortfolio --> */}
-      <input type="checkbox" id="project-portfolio" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-portfolio" class="close-button">×</label>
-          <div class="project-details">
-            <p>A personal portfolio website showcasing my projects.</p>
-            <h2>MyPortfolio</h2>
-            <video controls src="portfolio.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="portfolio.mp4" class="project-video"></video>
-            <p>Built with responsive design for mobile devices.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* IRC Overlay */}
+      <input type="checkbox" id="project-irc" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-irc" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>IRC</strong> is a classic chat server implementation in C++, 
+              allowing real-time messaging and channel creation.
+            </p>
+            <img src="https://www.illumy.com/wp-content/uploads/2023/08/WeeChat_3.4_screenshot11.png" alt="Project Screenshot" className="project-video" />
+            <p>
+              Written in <strong>C++</strong> and modeled after Internet Relay Chat 
+              protocols for multi-user text communication.
+            </p>
+            <a href="https://github.com/adrgonza/ft_irc" className="project-link">GitHub</a>
           </div>
         </div>
       </div>
 
-      {/* <!-- Full-page overlay for Youthbook --> */}
-      <input type="checkbox" id="project-youthbook" class="overlay-toggle" />
-      <div class="project-overlay">
-        <div class="overlay-content">
-          <label for="project-youthbook" class="close-button">×</label>
-          <div class="project-details">
-            <p>A social networking platform for the younger generation.</p>
-            <h2>Youthbook</h2>
-            <video controls src="youthbook.mp4" class="project-video"></video>
-            <p>Vue, Node.js</p>
-            <video controls src="youthbook.mp4" class="project-video"></video>
-            <p>Features include messaging, profiles, and posts.</p>
-            <a href="#" class="project-link">GitHub Link</a>
+      {/* MyPortfolio Overlay */}
+      <input type="checkbox" id="project-portfolio" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-portfolio" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>MyPortfolio</strong> is a personal website designed to showcase 
+              a curated set of projects and experiences.
+            </p>
+            <p>
+              Built using <strong>HTML</strong> and <strong>CSS</strong> with a responsive approach, 
+              making it accessible across different devices.
+            </p>
+            <a href="https://github.com/adrgonza/adrgonza.github.io" className="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Youthbook Overlay */}
+      <input type="checkbox" id="project-youthbook" className="overlay-toggle" />
+      <div className="project-overlay">
+        <div className="overlay-content">
+          <label htmlFor="project-youthbook" className="close-button">×</label>
+          <div className="project-details">
+            <p>
+              <strong>Youthbook</strong> is a personal film photography book that explores 
+              the essence of adolescence. Every image was shot, developed, and scanned 
+              by the author at home, capturing genuine, unfiltered moments.
+            </p>
+            <img src="https://i.ibb.co/hfhnFfP/MG-8841-CR2.jpg" alt="Project Screenshot" className="project-video" />
+            <p>
+              Using analog techniques, <strong>Youthbook</strong> immerses readers in the 
+              raw energy and delicate grain of film, reflecting the excitement, 
+              vulnerability, and fleeting nature of youth.
+            </p>
+            <img src="https://i.ibb.co/JdrbSHt/50872-D97-5-B5-F-461-C-BEB7-6-B95-F1-AFAAEC.jpg" alt="Project Screenshot" className="project-video" />
+            <img src="https://i.ibb.co/zXrKdt1/IMG-3288.jpg" alt="Project Screenshot" className="project-video" />
+            <img src="https://i.ibb.co/mDjX1Lp/C724809-E-207-A-4182-9-B05-3-A7-F3-DAB9-EA1.jpg" alt="Project Screenshot" className="project-video" />
+
           </div>
         </div>
       </div>

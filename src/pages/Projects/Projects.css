@@ -1,3 +1,39 @@
+.pixel-pong {
+  background-image: url("https://i.ibb.co/KWLx9WW/landing-bacground.gif");
+}
+
+.matcha {
+  background-image: url("https://i.ibb.co/9GMRGrz/Screenshot-2025-01-24-at-19-56-00.jpg");
+}
+
+.orionplat {
+  background-image: url("https://i.ibb.co/hcf6k3b/waves-8905720-1280.png");
+}
+
+.midlands {
+  background-image: url("https://i.ibb.co/hZsGvpp/Screenshot-2025-01-24-at-19-22-08.png");
+}
+
+.mineworld {
+  background-image: url("https://i.ibb.co/CwZwVY3/Screenshot-2025-01-24-at-19-35-42.png");
+}
+
+.minishell {
+  background-image: url("https://i.ibb.co/b7PP3kG/Screenshot-2025-01-24-at-19-48-34.png");
+}
+
+.irc {
+  background-image: url("https://www.illumy.com/wp-content/uploads/2023/08/WeeChat_3.4_screenshot11.png");
+}
+
+.portfolio {
+  background-image: url("https://i.postimg.cc/SqJm8ZbC/IMG-1692-1-2.webp");
+}
+
+.youthbook {
+  background-image: url("https://i.ibb.co/hfhnFfP/MG-8841-CR2.jpg");
+}
+
 .projects-container {
   display: flex;
   align-items: center;
@@ -19,7 +55,7 @@
   max-width: 1200px;
   height: 90%;
   padding: 0 24px;
-  scrollbar-width: none;
+  scrollbar-width: none; 
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -28,21 +64,24 @@
 
 .projects-item {
   flex: 0 0 calc(33.33% - 24px);
-  height: 70%;
   max-width: 350px;
+  height: 70%;
   scroll-snap-align: center;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333333;
+  justify-content: flex-start;
+  color: #c8c8c8;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 16px;
-  position: relative;
+  position: relative; 
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .projects-item:hover {
@@ -53,6 +92,7 @@
 .item-header {
   text-align: left;
   width: 100%;
+  z-index: 2; 
 }
 
 .item-title {
@@ -64,7 +104,19 @@
 .item-tools {
   font-size: 0.875rem;
   color: #666666;
+  font-weight: bold;
   margin: 4px 0 0;
+}
+
+.card-overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 20px;
 }
 
 .expand-button {
@@ -84,6 +136,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 2;
 }
 
 .expand-button:hover {
@@ -108,22 +161,24 @@
 
 .project-overlay {
   display: none;
-  position: fixed;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   pointer-events: none;
-  overflow-y: auto;
-  z-index: 10;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  padding: 20px;
+  justify-content: center;
   transform: scale(0.95);
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 10;
+  opacity: 0;
+  transition:
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999; 
+  backdrop-filter: blur(10px);
 }
 
 @keyframes fadeInScale {
@@ -138,10 +193,38 @@
 }
 
 .overlay-toggle:checked + .project-overlay {
-  display: flex;
-  opacity: 1;
+  display: flex; 
   pointer-events: auto;
   animation: fadeInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 1;
+}
+
+.overlay-content {
+  background: white;
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  padding: 40px;
+  margin: 0 auto;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.overlay-content::-webkit-scrollbar {
+  display: none;
 }
 
 .overlay-toggle:checked + .project-overlay .overlay-content {
@@ -149,47 +232,48 @@
   opacity: 1;
 }
 
-.overlay-content {
-  background-color: white;
-  color: black;
-  max-width: 900px;
-  height: 100%;
-  width: 100%;
-  padding: 40px;
-  border-radius: 17px;
-  text-align: left;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  transform: translateY(20px);
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+.close-button {
+  top: 16px;
+  right: 16px;
+  background-color: #2e2e2e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+}
+
+.close-button:hover {
+  transform: rotate(90deg) scale(1.05);
+  background-color: #4e4e4e;
 }
 
 .project-details {
+  width: 100%;
+  max-width: 800px; 
   margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.project-details p {
+  margin-bottom: 1.2rem;
 }
 
 .project-video {
   width: 100%;
   max-width: 700px;
   border-radius: 10px;
-}
-
-.close-button {
-  bottom: 16px;
-  right: 16px;
-  background-color: #2e2e2e;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin: 1.5rem auto; 
+  display: block;
 }
 
 .project-link {
@@ -202,9 +286,4 @@
 
 .project-link:hover {
   text-decoration: underline;
-}
-
-.close-button:hover {
-  transform: rotate(90deg);
-  background-color: #4e4e4e;
 }
