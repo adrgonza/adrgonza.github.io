@@ -179,3 +179,9 @@
   right: 0;
   transition-delay: 0s;
 }
+
+@media (max-width: 450px) {
+  .arrow {
+    display: none;
+  }
+}
