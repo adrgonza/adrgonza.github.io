@@ -9,7 +9,7 @@ const Projects = () => {
         <div className="projects-item pixel-pong">
           <div className="item-header">
             <h3 className="item-title">Pixel Pong</h3>
-            <p className="item-tools">JavaScript, HTML5, Canvas</p>
+            <p className="item-tools">Full-stack</p>
           </div>
           <label htmlFor="project-pixelpong" className="card-overlay-link"></label>
           <label htmlFor="project-pixelpong" className="expand-button">+</label>
@@ -270,7 +270,7 @@ const Projects = () => {
             <p>
               <strong>Youthbook</strong> is a personal film photography book that explores 
               the essence of adolescence. Every image was shot, developed, and scanned 
-              by the author at home, capturing genuine, unfiltered moments.
+              by me at home, capturing genuine, unfiltered moments.
             </p>
             <img src="https://i.ibb.co/hfhnFfP/MG-8841-CR2.jpg" alt="Project Screenshot" className="project-video" />
             <p>

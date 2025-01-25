@@ -85,7 +85,7 @@
 }
 
 .projects-item:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -286,4 +286,11 @@
 
 .project-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+  .projects-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
