@@ -3,27 +3,27 @@
 }
 
 .matcha {
-  background-image: url("https://i.ibb.co/9GMRGrz/Screenshot-2025-01-24-at-19-56-00.jpg");
+  background-image: url("https://i.ibb.co/qsj6VQP/Screenshot-2025-01-24-at-19-56-00.webp");
 }
 
 .orionplat {
-  background-image: url("https://i.ibb.co/hcf6k3b/waves-8905720-1280.png");
+  background-image: url("https://i.ibb.co/Lr4w4qP/waves-8905720-1280.webp");
 }
 
 .midlands {
-  background-image: url("https://i.ibb.co/hZsGvpp/Screenshot-2025-01-24-at-19-22-08.png");
+  background-image: url("https://i.ibb.co/7JpDknn/Screenshot-2025-01-24-at-19-22-08.webp");
 }
 
 .mineworld {
-  background-image: url("https://i.ibb.co/CwZwVY3/Screenshot-2025-01-24-at-19-35-42.png");
+  background-image: url("https://i.ibb.co/Qd4khnb/Screenshot-2025-01-24-at-19-35-42.webp");
 }
 
 .minishell {
-  background-image: url("https://i.ibb.co/b7PP3kG/Screenshot-2025-01-24-at-19-48-34.png");
+  background-image: url("https://i.ibb.co/y6gr6pZ/Screenshot-2025-01-24-at-19-48-34.webp");
 }
 
 .irc {
-  background-image: url("https://www.illumy.com/wp-content/uploads/2023/08/WeeChat_3.4_screenshot11.png");
+  background-image: url("https://i.ibb.co/fk0hRP5/Wee-Chat-3.webp");
 }
 
 .portfolio {
@@ -31,7 +31,7 @@
 }
 
 .youthbook {
-  background-image: url("https://i.ibb.co/hfhnFfP/MG-8841-CR2.jpg");
+  background-image: url("https://i.ibb.co/Z6DXWgs/MG-8841-CR2.webp");
 }
 
 .projects-container {
@@ -85,8 +85,8 @@
 }
 
 .projects-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); affecting too much the performance*/
 }
 
 .item-header {
@@ -135,7 +135,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   z-index: 2;
 }
 
@@ -166,36 +165,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.95);
   opacity: 0;
-  transition:
-    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999; 
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(2px); its affecting too much the performance*/ 
 }
 
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+
 
 .overlay-toggle:checked + .project-overlay {
   display: flex; 
   pointer-events: auto;
-  animation: fadeInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 1;
 }
 
