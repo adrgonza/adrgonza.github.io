@@ -112,7 +112,7 @@ const Projects = () => {
               This was the final project in the 42 common core, where I led the creative 
               design and front-end implementation.
             </p>
-            <a href="https://github.com/adrgonza/ft_transcendence" className="project-link">GitHub</a>
+            <a href="https://github.com/adrgonza/ft_transcendence" className="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@ const Projects = () => {
               and the game will analyze this array to render the new layout in real-time.
             </p>
             <img src="https://i.ibb.co/gjyrNF3/Screenshot-2025-01-24-at-20-55-30.webp" alt="Project Screenshot" className="project-video" loading="lazy"/>
-            <a href="https://github.com/adrgonza/so_long" className="project-link">GitHub</a>
+            <a href="https://github.com/adrgonza/so_long" className="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -195,7 +195,7 @@ const Projects = () => {
               to create procedurally generated maps and immersive environments.
             </p>
             <img src="https://i.ibb.co/7SywnHW/Screenshot-2025-01-24-at-19-31-53.webp" alt="Project Screenshot" className="project-video" loading="lazy"/>
-            <a href="https://github.com/adrgonza/cub3D" className="project-link">GitHub</a>
+            <a href="https://github.com/adrgonza/cub3D" className="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -217,7 +217,7 @@ const Projects = () => {
               user commands, manages processes, manipulates files, and supports a wide range 
               of built-in commands.
             </p>
-            <a href="https://github.com/adrgonza/minishell" className="project-link">GitHub</a>
+            <a href="https://github.com/adrgonza/minishell" className="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -237,7 +237,7 @@ const Projects = () => {
               Written in <strong>C++</strong> and modeled after Internet Relay Chat 
               protocols for multi-user text communication.
             </p>
-            <a href="https://github.com/adrgonza/ft_irc" className="project-link">GitHub</a>
+            <a href="https://github.com/adrgonza/ft_irc" className="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
@@ -256,7 +256,7 @@ const Projects = () => {
               Built using <strong>HTML</strong> and <strong>CSS</strong> with a responsive approach, 
               making it accessible across different devices.
             </p>
-            <a href="https://github.com/adrgonza/adrgonza.github.io" className="project-link">GitHub</a>
+            <a href="https://github.com/adrgonza/adrgonza.github.io" className="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
