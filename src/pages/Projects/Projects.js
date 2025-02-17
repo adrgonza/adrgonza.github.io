@@ -25,7 +25,6 @@ const Projects = () => {
           <label htmlFor="project-mineworld" className="expand-button">+</label>
         </div>
 
-
         {/* Orionplatform */}
         <div className="projects-item orionplat">
           <div className="item-header">
@@ -46,6 +45,16 @@ const Projects = () => {
           <label htmlFor="project-midlands" className="expand-button">+</label>
         </div>
 
+        {/* Matcha */}
+        <div className="projects-item matcha">
+          <div className="item-header">
+            <h3 className="item-title">Matcha</h3>
+            <p className="item-tools">React, Express, PostgreSQL</p>
+          </div>
+          <label htmlFor="project-matcha" className="card-overlay-link"></label>
+          <label htmlFor="project-matcha" className="expand-button">+</label>
+        </div>
+
         {/* Minishell */}
         <div className="projects-item minishell">
           <div className="item-header">
@@ -64,16 +73,6 @@ const Projects = () => {
           </div>
           <label htmlFor="project-irc" className="card-overlay-link"></label>
           <label htmlFor="project-irc" className="expand-button">+</label>
-        </div>
-
-        {/* Matcha */}
-        <div className="projects-item matcha">
-          <div className="item-header">
-            <h3 className="item-title">Matcha</h3>
-            <p className="item-tools">React, Express, PostgreSQL</p>
-          </div>
-          <label htmlFor="project-matcha" className="card-overlay-link"></label>
-          <label htmlFor="project-matcha" className="expand-button">+</label>
         </div>
 
         {/* MyPortfolio */}
