@@ -107,7 +107,7 @@ const Projects = () => {
               <strong>Pixel Pong</strong> is a multiplayer take on the classic Pong 
               game, enhanced with delightful pixel art.
             </p>
-            <video controls autoplay muted ="none" src="https://media-hosting.imagekit.io//0a903c845c3a46db/377062596-09fb5cc9-d574-46b7-9f25-6e012b8fe88e.mp4?Expires=1832500648&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=l6qzL-ApNqNCUH1wQGjUcBo6MI8VADHoIBxvacz2ZQ2pE1a5X-MOkpHzv6~jxuAb4xyM~V9GCmvE5K6Usesazm-d6w1gaWWyBa6ZgpBiYDA-tWVac3QutRbJAtkKkElgrZuVCHfjGLUxTdgEEr3rE~teBa1-Olf3Q-2fDSowGQ3HYu4WHPOsNHP7A9y6jvyotzNo6-49-VNcugUumGYm-gM6h1c4qGxYsslV-lvrj7wt1-w4VdryGh0vDYtxChG2Gmm5wKwMsIFpQVRGWH3At8PwSgLzZPx5vS5auJsm9s2WyMWEadWNVNWI6hjrsuVbRxn13N1FIjBKVRUZp4prBw__" className="project-video"></video>
+            <video controls autoplay muted ="none" src='/assets/Trans_video.mp4' className="project-video"></video>
             <p>
               This was the final project in the 42 common core, where I led the creative 
               design and front-end implementation.
@@ -127,7 +127,7 @@ const Projects = () => {
               <strong>Matcha</strong> is a modern dating app that connects people based 
               on real-time location and shared interests.
             </p>
-            <video controls autoplay muted ="none" src="https://media-hosting.imagekit.io//4654510d12e544d2/Screen%20Recording%202025-01-26%20at%2013.18.56.mp4?Expires=1832502198&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=3K1rL87qWxSxv9gfvcOVkU7JoiaJp61aE7jBU~njSQtm2cb0HYhmDkVRPi02c4wb1xvgFCK5W7RPHNkQKcHAlb4d9YfDvNsHC~Ga04Yv1t9VHj~yciibw3eddzQbqYBPPacaT2n-THHQYh6SiyiWgyFXazRAeFSzVI8l-dzSbidlk-ezdw2naLr-aUcK3AAtF06YH~-sVzP65HStduZv~HYa2cdzhcPqdwnsTkSvUxNilzHgYcZFm9ZvghApS2gujqxkaFp--bDdcpX4DthrCa2Xb4gw4LIezuNZR25OoORwt~ITdA7yy-a46itZtS6CRLIkflrYi4uE61J2oNlolQ__" className="project-video"></video>
+            <video controls autoplay muted ="none" src="/assets/Matcha_video.mp4" className="project-video"></video>
             <p>
               Built with <strong>React</strong>, <strong>Express</strong>, and <strong>PostgreSQL</strong>, it offers robust
               privacy settings and a clean, intuitive interface for users seeking meaningful connections.
@@ -147,7 +147,7 @@ const Projects = () => {
               to create a containerized trading network. Each user runs in a separate container, defined by a single 
               configuration file.
             </p>
-            <video controls autoplay muted ="none" src="https://media-hosting.imagekit.io//dd4040bbd54b4da0/IMG_8706.mp4?Expires=1832500222&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MBMC9zwjE39ohQq3ViUEv~fDSP67-4C1PcrMPyDhlsAiymi1wQEI8~~kiiSvP28oRUzMExSiKI2soUvkPPp0ADrRg05X7VEcGMnAqJnT-FtaH4xZj5zBp1lodxhm2VuO5LX5Rf06tDxWyAyeaB0~nVbrkA~YaccjzsQ5INfHp52fTPWbEgTUr1NEq6WUHqJFHuupTcGC-eRsO3LzRrD1E29VyAGx2jiuGqDzh1YfaD3L5K03F4DXqX95pNjIr3LPuV1x~wEMapYanvo9~DW5ey0MXYO7d~C7RmuASL5JY7iSPJNSXNQRhYjpM9Bp057dQNOXN1eYFcm02nl2DnjYAQ__" className="project-video"></video>
+            <video controls autoplay muted ="none" src="/assets/Bot_video.mp4" className="project-video"></video>
             <p>
               A central server receives trading signals and distributes them to user containers, which then place 
               orders through multiple crypto exchange APIs. This approach ensures scalable and secure multi-user 
@@ -189,7 +189,7 @@ const Projects = () => {
               <strong>MineWorld</strong> is a 2D/3D hybrid game inspired by 
               sandbox-style exploration and raycasting techniques.
             </p>
-            <video controls autoplay muted ="none" src="https://media-hosting.imagekit.io//0cb89fd3d10344f4/Screen%20Recording%202025-01-24%20at%2019.33.46%202.mp4?Expires=1832499867&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Sl94n~nITf6YrAGBrgd~q5YwWTtapni7BdtKlzd32AiYLMnA7BwEoCDXT1Yz6sEm6soOVHyB8EDWhloPFeEGEcxLGiCBRflE7VcN8as1gLB2HoPUghSwIXDSWrGP0rAwaov-ay9vrwNIom1J1jjXHwmx9iw9AJ3IrbSRCvZOs8E4auc3TpOKPOBLXvgX4Qn9X4OmbouQD9w2P5zovy~cwXOJocJwgVLdQWGk3Ii7nSp~AekdzhZpdxwlVX4jijD5Xs7elAPDizvYA9CwExSYCXaHNdUS2aj4-vHcZKTT97CWP~0qRG0JuOF~X22qamOgHeEFR8rxJcQUp58ute~dtw__" className="project-video"></video>
+            <video controls autoplay muted ="none" src="/assets/Cub_video.mp4" className="project-video"></video>
             <p>
               Developed with <strong>C</strong>, <strong>Graphic libraries</strong>, and <strong>Raycasting </strong> 
               to create procedurally generated maps and immersive environments.
@@ -211,7 +211,7 @@ const Projects = () => {
               to <strong>Bash</strong> with extensive features, handling core command 
               functionalities and scripting basics.
             </p>
-            <video controls autoplay muted ="none" src="https://media-hosting.imagekit.io//a3d3054fd96945f6/Screen%20Recording%202025-01-24%20at%2021.07.00.mp4?Expires=1832501645&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=p9quDfVLuiFXDUFjErevg8pLXBcHiN2De6HzjDL9d8t8fCBbxlYapGrOYBWc3ClHyC0zC1vDP7J6XDDJfSI4rXjpdudO6pbSHgvmxLpkASvLtTB59vzZW5clXB7JuTeNYKBkaU4uTGMKFdyf7pkk9GwIEoKcM1jse8GPqx3syY9kWj7e7O0Lh6ZoIncJTjK~dJaoYFMkssDoSzBrJndfZ4~9Tjf~6J~AFJsHnnDFWRi7xvHPe3rSsLrtcUFFxtnE6WDl2~MQSZxwRBkeJiEpJ0UjNc0fgo4b6Vlcjl4~0HiPOe1XDo3kg4xCqcsHg9UDSjia08JQV6qhoPhFCIydbg__" className="project-video"></video>
+            <video controls autoplay muted ="none" src="/assets/Minishell_video.mp4" className="project-video"></video>
             <p>
               Written in <strong>C</strong> and inspired by <strong>Bash</strong>, it interprets 
               user commands, manages processes, manipulates files, and supports a wide range 
