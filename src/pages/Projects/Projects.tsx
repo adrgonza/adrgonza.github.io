@@ -106,12 +106,17 @@ const projects: Project[] = [
   },
 ];
 
-const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => (
+interface ProjectCardProps {
+  project: Project;
+  onClick: () => void;
+}
+
+const ProjectCard = ({ project, onClick }: ProjectCardProps) => (
   <article
     className="flex-shrink-0 w-[300px] h-[400px] rounded-2xl shadow-lg snap-center cursor-pointer group relative overflow-hidden"
     style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     onClick={onClick}
-    onKeyDown={(e) => e.key === 'Enter' && onClick()}
+    onKeyDown={(e) => { if (e.key === 'Enter') onClick(); }}
     role="button"
     tabIndex={0}
     aria-label={`View ${project.title} details`}
@@ -124,17 +129,16 @@ const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => vo
   </article>
 );
 
-const ProjectDialog = ({
-  project,
-  onClose
-}: {
+interface ProjectDialogProps {
   project: Project;
   onClose: () => void;
-}) => {
+}
+
+const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     const handleClickOutside = (e: MouseEvent) => {
       if (dialogRef.current && !dialogRef.current.contains(e.target as Node)) onClose();
     };
@@ -179,15 +183,26 @@ const Projects = () => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const currentProject = projects.find((p) => p.id === activeProject);
 
+  const handleCardClick = (id: string) => {
+    setActiveProject(id);
+  };
+
   return (
     <main className="min-h-screen bg-[#f5f5f7] flex items-center justify-center p-6">
       <section className="flex gap-6 overflow-x-auto py-4 px-6 max-w-6xl w-full snap-x snap-mandatory">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} onClick={() => setActiveProject(project.id)} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onClick={() => handleCardClick(project.id)}
+          />
         ))}
       </section>
       {currentProject && (
-        <ProjectDialog project={currentProject} onClose={() => setActiveProject(null)} />
+        <ProjectDialog
+          project={currentProject}
+          onClose={() => setActiveProject(null)}
+        />
       )}
     </main>
   );
