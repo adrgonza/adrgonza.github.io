@@ -154,12 +154,8 @@
   }
 }
 
-.overlay-toggle {
-  display: none;
-}
-
+/* Project Dialog Overlay */
 .project-overlay {
-  display: none;
   position: fixed; 
   top: 0;
   left: 0;
@@ -167,21 +163,19 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   z-index: 999; 
-  /* backdrop-filter: blur(2px); its affecting too much the performance*/ 
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* backdrop-filter: blur(2px); its affecting too much the performance*/
 }
 
-
-
-.overlay-toggle:checked + .project-overlay {
-  display: flex; 
-  pointer-events: auto;
+.project-overlay.active {
   opacity: 1;
+  visibility: visible;
 }
 
 .overlay-content {
@@ -206,20 +200,28 @@
   transition: opacity 0.4s ease, transform 0.4s ease;
   overflow-y: auto;
   scrollbar-width: none;
+  position: relative;
+}
+
+.project-overlay.active .overlay-content {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .overlay-content::-webkit-scrollbar {
   display: none;
 }
 
-.overlay-toggle:checked + .project-overlay .overlay-content {
-  transform: translateY(0);
-  opacity: 1;
+/* Sticky Close Button */
+.sticky-close-button {
+  position: sticky;
+  top: 0;
+  align-self: flex-end;
+  z-index: 10;
+  padding: 0 0 10px 0;
 }
 
 .close-button {
-  top: 16px;
-  right: 16px;
   background-color: #2e2e2e;
   color: white;
   border: none;
@@ -233,12 +235,19 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  position: absolute;
 }
 
 .close-button:hover {
   transform: rotate(90deg) scale(1.05);
   background-color: #4e4e4e;
+}
+
+.dialog-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.75rem;
+  color: #333;
+  width: 100%;
+  text-align: center;
 }
 
 .project-details {
@@ -277,5 +286,13 @@
   .projects-item:hover {
     transform: none;
     box-shadow: none;
+  }
+  
+  .overlay-content {
+    padding: 25px;
+  }
+  
+  .dialog-title {
+    font-size: 1.4rem;
   }
 }
