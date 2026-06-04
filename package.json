@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://adrgonza.github.io/adrgonza.github.io",
+  "homepage": "https://adrgonza.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
