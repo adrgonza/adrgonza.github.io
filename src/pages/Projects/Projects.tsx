@@ -111,36 +111,40 @@ interface ProjectCardProps {
   onClick: () => void;
 }
 
-const ProjectCard = ({ project, onClick }: ProjectCardProps) => (
-  <article
-    className="flex-shrink-0 w-[300px] h-[400px] rounded-2xl shadow-lg snap-center cursor-pointer group relative overflow-hidden"
-    style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-    onClick={onClick}
-    onKeyDown={(e) => { if (e.key === 'Enter') onClick(); }}
-    role="button"
-    tabIndex={0}
-    aria-label={`View ${project.title} details`}
-  >
-    <footer className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-      <h3 className="text-white text-xl font-bold">{project.title}</h3>
-      <p className="text-white/80 text-sm">{project.tools}</p>
-    </footer>
-    <span className="absolute top-4 right-4 w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">+</span>
-  </article>
-);
+const ProjectCard = (props: ProjectCardProps) => {
+  const { project, onClick } = props;
+  return (
+    <article
+      className="flex-shrink-0 w-[300px] h-[400px] rounded-2xl shadow-lg snap-center cursor-pointer group relative overflow-hidden"
+      style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      onClick={onClick as any}
+      onKeyDown={(e) => { if (e.key === 'Enter') (onClick as any)(); }}
+      role="button"
+      tabIndex={0}
+      aria-label={`View ${project.title} details`}
+    >
+      <footer className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+        <h3 className="text-white text-xl font-bold">{project.title}</h3>
+        <p className="text-white/80 text-sm">{project.tools}</p>
+      </footer>
+      <span className="absolute top-4 right-4 w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">+</span>
+    </article>
+  );
+};
 
 interface ProjectDialogProps {
   project: Project;
   onClose: () => void;
 }
 
-const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
+const ProjectDialog = (props: ProjectDialogProps) => {
+  const { project, onClose } = props;
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') (onClose as any)(); };
     const handleClickOutside = (e: MouseEvent) => {
-      if (dialogRef.current && !dialogRef.current.contains(e.target as Node)) onClose();
+      if (dialogRef.current && !dialogRef.current.contains(e.target as Node)) (onClose as any)();
     };
 
     document.addEventListener('keydown', handleEsc);
@@ -157,7 +161,7 @@ const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
       <article ref={dialogRef} className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8">
         <header className="sticky top-0 bg-white pb-4 flex justify-between items-center border-b mb-6">
           <h2 className="text-2xl font-bold text-gray-800">{project.title}</h2>
-          <button onClick={onClose} aria-label="Close dialog" className="w-10 h-10 bg-gray-800 text-white rounded-full text-xl hover:bg-gray-600 transition">×</button>
+          <button onClick={onClose as any} aria-label="Close dialog" className="w-10 h-10 bg-gray-800 text-white rounded-full text-xl hover:bg-gray-600 transition">×</button>
         </header>
         <p className="text-gray-600 mb-6">{project.description}</p>
         <section className="space-y-4">
@@ -183,26 +187,17 @@ const Projects = () => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const currentProject = projects.find((p) => p.id === activeProject);
 
-  const handleCardClick = (id: string) => {
-    setActiveProject(id);
-  };
-
   return (
     <main className="min-h-screen bg-[#f5f5f7] flex items-center justify-center p-6">
       <section className="flex gap-6 overflow-x-auto py-4 px-6 max-w-6xl w-full snap-x snap-mandatory">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onClick={() => handleCardClick(project.id)}
-          />
-        ))}
+        {projects.map((project) => {
+          const cardProps: ProjectCardProps = { project, onClick: () => setActiveProject(project.id) };
+          const card = <ProjectCard {...cardProps} />;
+          return <div key={project.id}>{card}</div>;
+        })}
       </section>
       {currentProject && (
-        <ProjectDialog
-          project={currentProject}
-          onClose={() => setActiveProject(null)}
-        />
+        <ProjectDialog project={currentProject} onClose={() => setActiveProject(null)} />
       )}
     </main>
   );
