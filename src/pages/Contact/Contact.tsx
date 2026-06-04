@@ -1,27 +1,64 @@
+import React from 'react';
+import './Contact.css';
+
 const Contact = () => {
   return (
-    <main className="min-h-screen bg-[#f5f5f7] flex flex-col items-center justify-center p-8">
-      <section className="text-center mb-16">
-        <p className="text-2xl text-gray-500 mb-4">Got a project in mind?</p>
-        <a href="mailto:adrian.gonser@icloud.com">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-800 hover:text-gray-600 transition">LET'S TALK</h1>
-          <svg className="w-12 h-12 mx-auto mt-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+    <div className="contact-container fade-in">
+      <header className="contact-intro slide-up">
+        <h2 className="contact-subtitle">Got a project in mind?</h2>
+        <a href="mailto:adrian.gonser@icloud.com" aria-label="Contact Me">
+          <div className="contact-arrow">
+            <h1 className="contact-title">LET'S TALK</h1>
+            <div className="arrow">
+              <div className="arrow-top"></div>
+              <div className="arrow-bottom"></div>
+            </div>
+          </div>
         </a>
-      </section>
-      <section className="text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">Adrian Gonzalez</h2>
-        <p className="text-gray-500 mb-8">Born in Spain, now seeking new challenges in Switzerland.</p>
-        <nav aria-label="Social links">
-          <ul className="flex gap-6 justify-center">
-            <li><a href="https://github.com/adrgonza" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900 font-semibold">Github</a></li>
-            <li><a href="https://linkedin.com/in/adrgonza" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900 font-semibold">LinkedIn</a></li>
-            <li><a href="https://salmon-guenevere-10.tiiny.site" target="_blank" rel="noreferrer" className="text-gray-600 hover:text-gray-900 font-semibold">CV</a></li>
-          </ul>
-        </nav>
-      </section>
-    </main>
+        <hr />
+      </header>
+
+      <main className="contact-content slide-up-delay">
+        <section className="contact-info">
+          <h2>Adrian Gonzalez</h2>
+          <p>
+            Born in Spain, now seeking new challenges in Switzerland.
+          </p>
+        </section>
+        <ul className="contact-links">
+          <li>
+            <a
+              href="https://github.com/adrgonza"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/adrgonza"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://salmon-guenevere-10.tiiny.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CV"
+            >
+              CV
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
   );
 };
 

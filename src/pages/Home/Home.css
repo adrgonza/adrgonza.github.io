@@ -1,0 +1,166 @@
+.home-page {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 40px;
+}
+
+.home-intro {
+  margin-bottom: 60px;
+  grid-column: 1 / 2;
+}
+
+.home-title {
+  font-size: clamp(4.5rem, 10vw, 12rem);
+  font-weight: 800;
+  color: #000;
+  line-height: 1.1;
+}
+
+.home-subtitle {
+  font-size: clamp(4.5rem, 10vw, 12rem);
+  font-weight: 300;
+  color: #555;
+  line-height: 1.1;
+}
+
+.home-description {
+  grid-column: 1 / 2;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 20px;
+  max-width: 500px;
+  color: #555;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 18px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5vh;
+}
+
+.home-button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-img {
+  max-width: 60vh;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hover-scale-img:hover {
+  transform: scale(1.04);
+}
+
+.home-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-social-link::before {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-social-link.github::before {
+  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg');
+}
+
+.home-social-link.linkedin::before {
+  background-image: url('https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg');
+}
+
+.home-social-link.cv::before {
+  background-image: url('https://www.svgrepo.com/show/11803/curriculum-vitae.svg');
+}
+
+@media (max-width: 1000px) {
+  .home-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .home-intro,
+  .home-description {
+    grid-column: 1 / 2;
+  }
+  .home-intro {
+    margin-bottom: 0px;
+  }
+  .home-description {
+    font-size: 1rem;
+  }
+  .home-content {
+    grid-row: 2 / 3;
+    padding-left: 10%;
+    align-items: center;
+    flex-direction: row;
+  }
+  .home-img {
+    max-width: 250px;
+    height: auto;
+  }
+  .home-social {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  .home-social-link {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-page {
+    padding: 0 15px;
+  }
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
