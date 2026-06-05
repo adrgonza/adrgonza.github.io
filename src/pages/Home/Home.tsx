@@ -13,12 +13,9 @@ const Home = () => {
       }}
     >
       {/* Column 1 - Left side */}
-      <div style={{ gridColumn: '1 / 2' }}>
+      <div>
         {/* Header: Hey, I'm Adrian */}
-        <header
-          className="mb-[60px]"
-          style={{ gridColumn: '1 / 2', gridRow: '1 / 2' }}
-        >
+        <header className="mb-[60px]">
           <h1
             className="text-black font-extrabold leading-[1.1] animate-slide-up"
             style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
@@ -33,13 +30,66 @@ const Home = () => {
           </h2>
         </header>
 
+        {/* Image + Social (mobile only) */}
+        <div className="mobile-media-row">
+          <img
+            src="https://i.postimg.cc/SqJm8ZbC/IMG-1692-1-2.webp"
+            alt="Adrian Gonzalez"
+            className="mobile-portrait"
+          />
+          <div className="mobile-social">
+            <a
+              href="https://github.com/adrgonza"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="w-[60px] h-[60px] rounded-full hover:scale-[1.1] hover:shadow-[0_6px 12px_rgba(0,0,0,0.2)] transition-all duration-300"
+              style={{
+                backgroundColor: '#fff',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                backgroundImage: 'url(https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg)',
+                backgroundSize: '50%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            />
+            <a
+              href="https://linkedin.com/in/adrgonza"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="w-[60px] h-[60px] rounded-full hover:scale-[1.1] hover:shadow-[0_6px 12px_rgba(0,0,0,0.2)] transition-all duration-300"
+              style={{
+                backgroundColor: '#fff',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                backgroundImage: 'url(https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg)',
+                backgroundSize: '50%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            />
+            <a
+              href="https://salmon-guenevere-10.tiiny.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CV"
+              className="w-[60px] h-[60px] rounded-full hover:scale-[1.1] hover:shadow-[0_6px 12px_rgba(0,0,0,0.2)] transition-all duration-300"
+              style={{
+                backgroundColor: '#fff',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                backgroundImage: 'url(https://www.svgrepo.com/show/11803/curriculum-vitae.svg)',
+                backgroundSize: '50%',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            />
+          </div>
+        </div>
+
         {/* Description */}
-        <main
-          className="animate-slide-up-delay"
-          style={{ gridColumn: '1 / 2', gridRow: '1 / -1' }}
-        >
+        <main className="animate-slide-up-delay">
           <p
-            className="text-[#555] leading-[2] mb-5 max-w-[500px] desc-text"
+            className="text-[#555] leading-[2] mb-5 max-w-[500px]"
             style={{ fontSize: '1.2rem' }}
           >
             Passionate Computer Science student with a love for web development,
@@ -49,7 +99,7 @@ const Home = () => {
           </p>
           <Link
             to="/projects"
-            className="inline-block px-[18px] py-[18px] text-base font-semibold text-white rounded-[50px] transition-all duration-[0.4s] hover:bg-[#444] hover:scale-[1.05] hover:shadow-[0_6px_10px_rgba(0,0,0,0.2)] mb-[5vh]"
+            className="inline-block px-[18px] py-[18px] text-base font-semibold text-white rounded-[50px] transition-all duration-[0.4s] hover:bg-[#444] hover:scale-[1.05] hover:shadow-[0_6px 10px_rgba(0,0,0,0.2)] mb-[5vh]"
             style={{ backgroundColor: '#000', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
           >
             EXPLORE MY WORK
@@ -57,23 +107,20 @@ const Home = () => {
         </main>
       </div>
 
-      {/* Column 2 - Right side: image + social */}
-      <aside
-        className="flex flex-col items-center animate-scale-in home-content"
-        style={{ gridColumn: '2 / 3', gridRow: '1 / 3' }}
-      >
+      {/* Column 2 - Right side: image + social (desktop only) */}
+      <aside className="desktop-media animate-scale-in">
         <img
           src="https://i.postimg.cc/SqJm8ZbC/IMG-1692-1-2.webp"
           alt="Adrian Gonzalez"
-          className="max-w-[60vh] w-full h-auto object-cover hover:scale-[1.04] transition-transform duration-300 home-img"
+          className="max-w-[60vh] w-full h-auto object-cover hover:scale-[1.04] transition-transform duration-300"
         />
-        <div className="flex justify-center items-center mt-[10px] home-social">
+        <div className="flex justify-center items-center mt-[10px]">
           <a
             href="https://github.com/adrgonza"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="w-[60px] h-[60px] rounded-full mx-[10px] hover:scale-[1.1] hover:shadow-[0_6px_12px_rgba(0,0,0,0.2)] transition-all duration-300"
+            className="w-[60px] h-[60px] rounded-full mx-[10px] hover:scale-[1.1] hover:shadow-[0_6px 12px_rgba(0,0,0,0.2)] transition-all duration-300"
             style={{
               backgroundColor: '#fff',
               boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
@@ -81,7 +128,6 @@ const Home = () => {
               backgroundSize: '50%',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              margin: '10px 0',
             }}
           />
           <a
@@ -89,7 +135,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="w-[60px] h-[60px] rounded-full mx-[10px] hover:scale-[1.1] hover:shadow-[0_6px_12px_rgba(0,0,0,0.2)] transition-all duration-300"
+            className="w-[60px] h-[60px] rounded-full mx-[10px] hover:scale-[1.1] hover:shadow-[0_6px 12px_rgba(0,0,0,0.2)] transition-all duration-300"
             style={{
               backgroundColor: '#fff',
               boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
@@ -97,7 +143,6 @@ const Home = () => {
               backgroundSize: '50%',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              margin: '10px 0',
             }}
           />
           <a
@@ -105,7 +150,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="CV"
-            className="w-[60px] h-[60px] rounded-full mx-[10px] hover:scale-[1.1] hover:shadow-[0_6px_12px_rgba(0,0,0,0.2)] transition-all duration-300"
+            className="w-[60px] h-[60px] rounded-full mx-[10px] hover:scale-[1.1] hover:shadow-[0_6px 12px_rgba(0,0,0,0.2)] transition-all duration-300"
             style={{
               backgroundColor: '#fff',
               boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
@@ -113,46 +158,58 @@ const Home = () => {
               backgroundSize: '50%',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              margin: '10px 0',
             }}
           />
         </div>
       </aside>
 
       <style>{`
+        /* Mobile layout (< 1000px) */
         @media (max-width: 1000px) {
-          .home-page-grid,
           .min-h-screen {
             grid-template-columns: 1fr !important;
-            grid-template-rows: auto !important;
+            grid-template-rows: auto auto auto !important;
+            align-items: start !important;
+            padding: 40px 15px !important;
           }
-          header.mb-\[60px\] {
-            margin-bottom: 0 !important;
+
+          .desktop-media {
+            display: none !important;
           }
-          .desc-text {
-            font-size: 1rem !important;
-          }
-          .home-content {
-            grid-row: 2 / 3 !important;
-            grid-column: 1 / 2 !important;
+
+          .mobile-media-row {
+            display: flex !important;
             flex-direction: row !important;
-            padding-left: 10% !important;
             align-items: center !important;
+            margin-bottom: 30px !important;
           }
-          .home-img {
-            max-width: 250px !important;
+
+          .mobile-portrait {
+            display: block !important;
+            max-width: 180px !important;
+            width: 100% !important;
             height: auto !important;
+            object-fit: cover !important;
           }
-          .home-social {
+
+          .mobile-social {
+            display: flex !important;
             flex-direction: column !important;
             margin-left: auto !important;
-            margin-right: 10px !important;
+            margin-right: 0 !important;
+            gap: 10px !important;
           }
         }
-        @media (max-width: 800px) {
-          .min-h-screen {
-            padding: 0 15px !important;
-          }
+
+        /* Default: hide mobile elements on desktop */
+        .mobile-media-row {
+          display: none;
+        }
+        .mobile-portrait {
+          display: none;
+        }
+        .mobile-social {
+          display: none;
         }
       `}</style>
     </div>
