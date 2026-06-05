@@ -39,7 +39,7 @@ const Home = () => {
           style={{ gridColumn: '1 / 2', gridRow: '1 / -1' }}
         >
           <p
-            className="text-[#555] leading-[2] mb-5 max-w-[500px]"
+            className="text-[#555] leading-[2] mb-5 max-w-[500px] desc-text"
             style={{ fontSize: '1.2rem' }}
           >
             Passionate Computer Science student with a love for web development,
@@ -59,15 +59,15 @@ const Home = () => {
 
       {/* Column 2 - Right side: image + social */}
       <aside
-        className="flex flex-col items-center animate-scale-in"
+        className="flex flex-col items-center animate-scale-in home-content"
         style={{ gridColumn: '2 / 3', gridRow: '1 / 3' }}
       >
         <img
           src="https://i.postimg.cc/SqJm8ZbC/IMG-1692-1-2.webp"
           alt="Adrian Gonzalez"
-          className="max-w-[60vh] w-full h-auto object-cover hover:scale-[1.04] transition-transform duration-300"
+          className="max-w-[60vh] w-full h-auto object-cover hover:scale-[1.04] transition-transform duration-300 home-img"
         />
-        <div className="flex justify-center items-center mt-[10px]">
+        <div className="flex justify-center items-center mt-[10px] home-social">
           <a
             href="https://github.com/adrgonza"
             target="_blank"
@@ -81,6 +81,7 @@ const Home = () => {
               backgroundSize: '50%',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
+              margin: '10px 0',
             }}
           />
           <a
@@ -96,6 +97,7 @@ const Home = () => {
               backgroundSize: '50%',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
+              margin: '10px 0',
             }}
           />
           <a
@@ -111,10 +113,48 @@ const Home = () => {
               backgroundSize: '50%',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
+              margin: '10px 0',
             }}
           />
         </div>
       </aside>
+
+      <style>{`
+        @media (max-width: 1000px) {
+          .home-page-grid,
+          .min-h-screen {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: auto !important;
+          }
+          header.mb-\[60px\] {
+            margin-bottom: 0 !important;
+          }
+          .desc-text {
+            font-size: 1rem !important;
+          }
+          .home-content {
+            grid-row: 2 / 3 !important;
+            grid-column: 1 / 2 !important;
+            flex-direction: row !important;
+            padding-left: 10% !important;
+            align-items: center !important;
+          }
+          .home-img {
+            max-width: 250px !important;
+            height: auto !important;
+          }
+          .home-social {
+            flex-direction: column !important;
+            margin-left: auto !important;
+            margin-right: 10px !important;
+          }
+        }
+        @media (max-width: 800px) {
+          .min-h-screen {
+            padding: 0 15px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
